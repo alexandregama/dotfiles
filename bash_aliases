@@ -1,3 +1,5 @@
+alias vim='nvim'
+
 alias ll='ls -l'
 alias la='ls -la'
 
@@ -19,5 +21,5 @@ alias gp="git ph"
 alias gpf="git ph -f"
 alias ga="git add ."
 alias gh="open `git remote -v | grep fetch | awk '{print $2}' | sed 's/git@/http:\/\//' | sed 's/com:/com\//'`| head -n1"
-alias hp="hub open"
+alias hb="hub browse"
 
