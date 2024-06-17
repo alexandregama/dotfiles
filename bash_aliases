@@ -1,4 +1,5 @@
 alias vim='nvim'
+alias vbalias='vim ~/bash_aliases'
 
 # ---- Eza (better ls) -----
 alias ls="eza --icons=always --color=always --long"
@@ -23,7 +24,10 @@ alias gl="git lg"
 alias gp="git ph"
 alias gpf="git ph -f"
 alias ga="git add ."
-alias gh="open `git remote -v | grep fetch | awk '{print $2}' | sed 's/git@/http:\/\//' | sed 's/com:/com\//'`| head -n1"
+
+# for some reason this alias is making the load startup slower
+# alias gh="open `git remote -v | grep fetch | awk '{print $2}' | sed 's/git@/http:\/\//' | sed 's/com:/com\//'`| head -n1"
+
 alias hb="hub browse"
 
 
