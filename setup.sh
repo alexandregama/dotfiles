@@ -31,4 +31,12 @@ if [ -d "$NVIM_CONFIG" ]; then
 fi
 ln -sf $DIR/nvim ~/.config/nvim
 
+# Remove existing Alacritty config folder it exists and create symlink
+ALACRITTY_CONFIG="$HOME/.config/alacritty"
+if [ -d "$ALACRITTY_CONFIG" ]; then
+  rm -rf "$ALACRITTY_CONFIG"
+  echo "Removed existing Alacritty config folder"
+fi
+ln -sf $DIR/alacritty ~/.config/alacritty
+
 echo "Symbolic links have been created successfully."
