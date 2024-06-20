@@ -13,11 +13,16 @@ if [ ! -d "$DIR" ]; then
   echo "Dotfiles directory does not exist. Creating directory and cloning repository..."
   git clone $REPO $DIR
   echo "Dotfiles directory created and repository cloned."
+else
+  echo "Dotfiles directory already exists. Skipping cloning."
 fi
 
 # Create symbolic links
 ln -sf $DIR/.zshrc ~/.zshrc
 ln -sf $DIR/.gitconfig ~/.gitconfig
 ln -sf $DIR/bash_aliases ~/.bash_aliases
+
+mkdir -p ~/.config
+ln -sf $DIR/nvim ~/.config/nvim
 
 echo "Symbolic links have been created successfully."

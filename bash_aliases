@@ -30,4 +30,5 @@ alias ga="git add ."
 
 alias hb="hub browse"
 
-
+alias pyactivate="source venv/bin/activate"
+alias pydeactivate="deactivate"
