@@ -22,7 +22,13 @@ ln -sf $DIR/.zshrc ~/.zshrc
 ln -sf $DIR/.gitconfig ~/.gitconfig
 ln -sf $DIR/bash_aliases ~/.bash_aliases
 
-mkdir -p ~/.config
+
+# Remove existing NeoVim config folder if it exists and create symlink
+NVIM_CONFIG="$HOME/.config/nvim"
+if [ -d "$NVIM_CONFIG" ]; then
+  rm -rf "$NVIM_CONFIG"
+  echo "Removed existing NeoVim config folder"
+fi
 ln -sf $DIR/nvim ~/.config/nvim
 
 echo "Symbolic links have been created successfully."
