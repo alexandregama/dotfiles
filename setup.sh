@@ -21,7 +21,7 @@ fi
 ln -sf $DIR/.zshrc ~/.zshrc
 ln -sf $DIR/.gitconfig ~/.gitconfig
 ln -sf $DIR/bash_aliases ~/.bash_aliases
-
+ln -sf $DIR/alacritty.toml ~/.config/alacritty
 
 # Remove existing NeoVim config folder if it exists and create symlink
 NVIM_CONFIG="$HOME/.config/nvim"
@@ -30,13 +30,5 @@ if [ -d "$NVIM_CONFIG" ]; then
   echo "Removed existing NeoVim config folder"
 fi
 ln -sf $DIR/nvim ~/.config/nvim
-
-# Remove existing Alacritty config folder it exists and create symlink
-ALACRITTY_CONFIG="$HOME/.config/alacritty"
-if [ -d "$ALACRITTY_CONFIG" ]; then
-  rm -rf "$ALACRITTY_CONFIG"
-  echo "Removed existing Alacritty config folder"
-fi
-ln -sf $DIR/alacritty ~/.config/alacritty
 
 echo "Symbolic links have been created successfully."
