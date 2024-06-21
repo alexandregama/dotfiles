@@ -140,11 +140,26 @@ return {
           },
         })
       end,
-      ["pyright"] = function()
+      ["pylsp"] = function()
         -- configure python server (with special settings)
-        lspconfig["pyright"].setup({
+        lspconfig["pylsp"].setup({
+          cmd = { "/Users/alexandregama/Projects/python/fastapi-app/venv/bin/pylsp" },
           capabilities = capabilities,
-          filetypes = { "python" },
+          settings = {
+            pylsp = {
+              configurationSources = { "pycodestyle" },
+              plugins = {
+                jedi = {
+                  environment = "/Users/alexandregama/Projects/python/fastapi-app/venv",
+                },
+                pylsp_mypy = { enabled = true },
+                pylsp_black = { enabled = true },
+                pylsp_isort = { enabled = true },
+                pyflakes = { enabled = false },
+                pycodestyle = { enabled = false },
+              },
+            },
+          },
         })
       end,
     })
