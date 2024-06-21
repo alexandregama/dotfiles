@@ -32,3 +32,12 @@ alias hb="hub browse"
 
 alias pyactivate="source venv/bin/activate"
 alias pydeactivate="deactivate"
+
+alias pversion="python3 --version"
+alias pyenv="python3 -m venv venv"
+
+alias redis-start="brew services start redis"
+alias redis-stop="brew services stop redis"
+
+alias vim-alias="vim ~/dotfiles/bash_aliases"
+alias vim-nvim="vim ~/.config/nvim/"
