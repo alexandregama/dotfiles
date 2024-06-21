@@ -22,7 +22,7 @@ return {
         python = { "isort", "black" },
       },
       format_on_save = {
-        lsp_fallback = true,
+        lsp_fallback = true, -- if a formatter isn't available to the current file it'll use a formatter from the lsp
         async = false,
         timeout_ms = 1000,
       },
