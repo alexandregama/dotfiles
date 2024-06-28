@@ -24,6 +24,7 @@ alias gl="git lg"
 alias gp="git ph"
 alias gpf="git ph -f"
 alias ga="git add ."
+alias gclonecd='function _gitclonecd() { git clone "$1" && cd "$(basename "$1")"; }; _gitclonecd'
 
 # for some reason this alias is making the load startup slower
 # alias gh="open `git remote -v | grep fetch | awk '{print $2}' | sed 's/git@/http:\/\//' | sed 's/com:/com\//'`| head -n1"
