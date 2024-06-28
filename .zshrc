@@ -34,3 +34,6 @@ alias cd="z"
 if [ -f ~/dotfiles/bash_aliases ]; then
     source ~/dotfiles/bash_aliases
 fi
+
+# asdf
+. $(brew --prefix asdf)/libexec/asdf.sh

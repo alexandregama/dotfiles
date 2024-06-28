@@ -20,6 +20,7 @@ return {
         liquid = { "prettier" },
         lua = { "stylua" },
         python = { "isort", "black" },
+        ruby = { "ruby-lsp" },
       },
       format_on_save = {
         lsp_fallback = true, -- if a formatter isn't available to the current file it'll use a formatter from the lsp
