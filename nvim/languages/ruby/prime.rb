@@ -16,5 +16,5 @@ end
 puts "Enter a number:"
 max = gets.to_i
 prime_numbers = prime_numbers_up_to(max)
-puts "Prime numbers up to #{max}:"
+  puts "Prime numbers up to #{max}:"
 puts prime_numbers.join(', ')
