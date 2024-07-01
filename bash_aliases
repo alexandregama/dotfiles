@@ -14,6 +14,7 @@ alias uuuu="cd ../../../../"
 alias uuuuu="cd ../../../../../"
 
 alias rehash="source ~/.zshrc"
+alias dotfiles="sh ~/dotfiles/setup.sh"
 
 alias gf="git fupum"
 alias gam="git add .; git ci --amend --no-edit"
