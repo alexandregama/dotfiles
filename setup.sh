@@ -32,3 +32,12 @@ fi
 ln -sf $DIR/nvim ~/.config/nvim
 
 echo "Symbolic links have been created successfully."
+
+VSCODE_SETTINGS_SOURCE=$DIR/vscode/settings.json
+VSCODE_SETTINGS_TARGET=~/Library/Application\ Support/Code/User/settings.json
+
+mkdir -p "$(dirname "$VSCODE_SETTINGS_TARGET")"
+
+ln -sf "$VSCODE_SETTINGS_SOURCE" "$VSCODE_SETTINGS_TARGET"
+
+echo "VSCode settings.json symlink created"
