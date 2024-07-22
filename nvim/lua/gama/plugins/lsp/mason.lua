@@ -34,6 +34,7 @@ return {
         "lua_ls",
         "prismals",
         "pylsp",
+        "ruby-lsp",
       },
     })
 
