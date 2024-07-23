@@ -162,18 +162,11 @@ return {
           },
         })
       end,
-      ["ruby-lsp"] = function()
-        lspconfig["ruby-lsp"].setup({
-          -- cmd = { "ruby-lsp" },
-          cmd = { "bundle", "exec", "ruby-lsp" },
-          capabilities = capabilities,
-          filetypes = { "ruby" },
-          root_dir = lspconfig.util.root_pattern("Gemfile", ".git"),
+      ["solargraph"] = function()
+        lspconfig["solargraph"].setup({
           settings = {
-            ruby = {
-              format = {
-                enabled = true,
-              },
+            solargraph = {
+              diagnostics = true,
             },
           },
         })

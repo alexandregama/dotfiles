@@ -1,3 +1,4 @@
+-- Mason is a Package Manager used to install the Language Servers we need
 return {
   "williamboman/mason.nvim",
   dependencies = {
@@ -34,7 +35,7 @@ return {
         "lua_ls",
         "prismals",
         "pylsp",
-        "ruby-lsp",
+        "solargraph",
       },
     })
 

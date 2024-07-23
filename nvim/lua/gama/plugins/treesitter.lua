@@ -11,6 +11,8 @@ return {
 
     -- configure treesitter
     treesitter.setup({ -- enable syntax highlighting
+      modules = {},
+
       highlight = {
         enable = true,
       },
@@ -43,11 +45,18 @@ return {
         "vimdoc",
         "c",
       },
+      -- automatically install missing parsers when entering buffer
+      auto_install = true,
+      -- list of parsers to ignore installing (for "all")
+      ignore_install = {},
+      -- synchronize parser installation
+      sync_install = false,
+
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = "<C-space>",
-          node_incremental = "<C-space>",
+          init_selection = "<C-Space>",
+          node_incremental = "<C-Space>",
           scope_incremental = false,
           node_decremental = "<bs>",
         },

@@ -5,6 +5,7 @@ def primes(n: int):
 
     # variable just to test the formatter
     j = [1, 2, 3]
+    l = [1, 2, 3]
 
     for i in range(2, n):
         if sieve[i]:
