@@ -3,7 +3,7 @@ def prime_numbers_up_to(max)
   (2..max).each do |num|
     is_prime = true
     (2..Math.sqrt(num)).each do |i|
-      if num % i == 0
+      if (num % i).zero?
         is_prime = false
         break
       end
@@ -13,8 +13,8 @@ def prime_numbers_up_to(max)
   primes
 end
 
-puts "Enter a number:"
+puts 'Enter a number:'
 max = gets.to_i
 prime_numbers = prime_numbers_up_to(max)
-  puts "Prime numbers up to #{max}:"
+puts "Prime numbers up to #{max}:"
 puts prime_numbers.join(', ')

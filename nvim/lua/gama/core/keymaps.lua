@@ -54,3 +54,12 @@ keymap.set("i", "j;", "<Esc>A ", { desc = "Exit insert mode, move to the end of 
 
 -- Define a key mapping for exiting insert mode and moving to the end of the line in insert mode using jl
 keymap.set("i", "ji", "<Esc>lli", { desc = "Exit insert mode and move to the end of the line in insert mode with jl" })
+
+-- Import the theme switcher
+local themeswitcher = require("gama.utils.themeswitcher")
+
+-- Create a command to toggle themes
+vim.api.nvim_create_user_command("ToggleTheme", themeswitcher.toggle_theme, {})
+
+-- Create a keybinding to toggle themes
+keymap.set("n", "<leader>tt", ":ToggleTheme<CR>", { desc = "Toggle between themes" })
