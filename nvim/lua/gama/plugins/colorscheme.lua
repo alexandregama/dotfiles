@@ -40,5 +40,36 @@ return {
       })
     end,
   },
-  -- Add more themes here...
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+  },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    priority = 1000,
+  },
+  {
+    "craftzdog/solarized-osaka.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  {
+    "savq/melange-nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    "xero/miasma.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    "sho-87/kanagawa-paper.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
 }

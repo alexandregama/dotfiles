@@ -1,18 +1,18 @@
 -- themeswitcher.lua
 
-local current_theme = "everforest"
+local themes = { "tokyonight", "everforest", "catppuccin" }
+local current_index = 1
 
 local function switch_theme(theme_name)
-  current_theme = theme_name
   vim.cmd("colorscheme " .. theme_name)
 end
 
 local function toggle_theme()
-  if current_theme == "tokyonight" then
-    switch_theme("everforest")
-  else
-    switch_theme("tokyonight")
+  current_index = current_index + 1
+  if current_index > #themes then
+    current_index = 1
   end
+  switch_theme(themes[current_index])
 end
 
 -- Export functions
