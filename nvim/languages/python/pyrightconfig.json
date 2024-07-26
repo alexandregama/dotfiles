@@ -1,0 +1,12 @@
+{
+  "venvPath": "./",
+  "venv": "venv",
+  "pythonVersion": "3.9",
+  "pythonPlatform": "Darwin",
+  "extraPaths": [""],
+  "reportMissingImports": true,
+  "pythonPath": "./venv/bin/python",
+  "reportMissingImports": true,
+  "logLevel": "trace",
+  "log": "./pyright.log"
+}
