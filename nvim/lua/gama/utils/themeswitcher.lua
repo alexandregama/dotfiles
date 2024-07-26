@@ -1,6 +1,6 @@
 -- themeswitcher.lua
 
-local themes = { "tokyonight", "everforest", "catppuccin" }
+local themes = { "tokyonight", "everforest", "catppuccin", "kanagawa-paper" }
 local current_index = 1
 
 local function switch_theme(theme_name)

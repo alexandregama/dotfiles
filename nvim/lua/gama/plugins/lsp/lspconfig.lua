@@ -140,33 +140,50 @@ return {
           },
         })
       end,
-      ["pylsp"] = function()
-        -- configure python server (with special settings)
-        lspconfig["pylsp"].setup({
-          cmd = { "/Users/alexandregama/Projects/python/fastapi-app/venv/bin/pylsp" },
-          capabilities = capabilities,
-          settings = {
-            pylsp = {
-              configurationSources = { "pycodestyle" },
-              plugins = {
-                jedi = {
-                  environment = "/Users/alexandregama/Projects/python/fastapi-app/venv",
-                },
-                pylsp_mypy = { enabled = true },
-                pylsp_black = { enabled = true },
-                pylsp_isort = { enabled = true },
-                pyflakes = { enabled = false },
-                pycodestyle = { enabled = false },
-              },
-            },
-          },
-        })
-      end,
+      -- ["pylsp"] = function()
+      --   -- configure python server (with special settings)
+      --   lspconfig["pylsp"].setup({
+      --     cmd = { "/Users/alexandregama/Projects/python/fastapi-app/venv/bin/pylsp" },
+      --     capabilities = capabilities,
+      --     settings = {
+      --       pylsp = {
+      --         configurationSources = { "pycodestyle" },
+      --         plugins = {
+      --           jedi = {
+      --             environment = "/Users/alexandregama/Projects/python/fastapi-app/venv",
+      --           },
+      --           pylsp_mypy = { enabled = true },
+      --           pylsp_black = { enabled = true },
+      --           pylsp_isort = { enabled = true },
+      --           pyflakes = { enabled = false },
+      --           pycodestyle = { enabled = false },
+      --         },
+      --       },
+      --     },
+      --   })
+      -- end,
       ["solargraph"] = function()
         lspconfig["solargraph"].setup({
           settings = {
             solargraph = {
               diagnostics = true,
+            },
+          },
+        })
+      end,
+      ["pyright"] = function()
+        lspconfig["pyright"].setup({
+          capabilities = capabilities,
+          on_attach = function(client, bufnr)
+            -- Optional: Customize on_attach logic for Pyright here
+          end,
+          settings = {
+            python = {
+              analysis = {
+                typeCheckingMode = "basic", -- or "strict"
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+              },
             },
           },
         })

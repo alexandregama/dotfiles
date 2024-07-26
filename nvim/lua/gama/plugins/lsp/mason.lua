@@ -34,7 +34,7 @@ return {
         "tailwindcss",
         "lua_ls",
         "prismals",
-        "pylsp",
+        "pyright",
         "solargraph",
       },
     })
@@ -43,8 +43,8 @@ return {
       ensure_installed = {
         "prettier", -- prettier formatter
         "stylua", -- lua formatter
-        "isort", -- python formatter
-        "black", -- python formatter
+        -- "isort", -- python formatter
+        -- "black", -- python formatter
         "eslint_d",
         "pylint",
       },
